@@ -44,5 +44,13 @@ public class SinglyLinkedApp {
         System.out.println("after remove duplicate");
         list2.print();
 
+        /*check node list is palindrome or not*/
+        SinglyLinkedList list=new SinglyLinkedList();
+        list.add(1);
+        list.add(3);
+        list.add(3);
+        list.add(1);
+        System.out.println("list.isPalindrome() = " + list.isPalindrome());
+
     }
 }

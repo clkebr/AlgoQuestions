@@ -1,5 +1,8 @@
 package org.algo;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 public class SinglyLinkedList {
 
     Node head;
@@ -144,5 +147,25 @@ public class SinglyLinkedList {
         }
     }
 
+    public boolean isPalindrome(){
+
+        Node current=head;
+        Deque<Integer> stack=new LinkedList<>();
+        String s1="";
+        String s2="";
+        System.out.println("size = " + size);
+        while(current!=null){
+            s1+=current.value;
+            stack.push(current.value);
+            current=current.next;
+        }
+        for (int i = 0; i < this.size; i++) {
+            s2+=stack.pop();
+        }
+
+        System.out.println("s2 = " + s2);
+        System.out.println("s1 = " + s1);
+        return s1.equals(s2);
+    }
 
 }
