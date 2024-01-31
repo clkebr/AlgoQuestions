@@ -1,11 +1,9 @@
 package org.algo;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
-public class FirstRepeatedChar {
+public class Algo_3_FirstRepeatedChar {
     /*return the first repeated char in a string for example "a green apple" the first repeated char is e */
     public static void main(String[] args) {
         System.out.println("firstRepeatedChar(\"a green apple\") = " + firstRepeatedChar("a green apple"));

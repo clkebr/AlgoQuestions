@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoNumSum {
+public class Algo_1_TwoNumSum {
     /*
     Given an array of integers nums and an integer target, return indices of the two
     numbers such that they add up to target.
@@ -18,7 +18,7 @@ public class TwoNumSum {
 
     public static void main(String[] args) {
 
-        int[] array={2,7,9,11};
+        int[] array={7,21,73,9,11,2};
         System.out.println(Arrays.toString(twoSum1(array,9)));
         System.out.println("Optimal Solution .....");
         System.out.println(Arrays.toString(twoSum2(array,9)));
@@ -43,11 +43,12 @@ public class TwoNumSum {
         // If a potential match exists return that indices else put the array value and index to map
         for(int i=0;i< array.length;i++){
             int potentialMatch=target-array[i];
-            if(map.containsKey(potentialMatch)) return new int[]{i, map.get(potentialMatch)};
+            if(map.containsKey(potentialMatch)) return new int[]{ map.get(potentialMatch),i };
             else map.put(array[i],i);
         }
         return new int[]{};
     }
+
     public static int[] twoSumTwoPointer(int[] array, int target) {
         //Sort the array. (This has a cost! O(nlogn))
         Arrays.sort(array);
