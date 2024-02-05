@@ -19,7 +19,6 @@ public class SinglyLinkedList {
     }
     // add data at the end of list
     void add(int data){
-        Node pointer = tail;
         Node newNode = new Node(data);
         if(isEmpty()){
             tail=head=newNode;
@@ -41,9 +40,9 @@ public class SinglyLinkedList {
         Node prev = head;
         Node current = head;
         while (current != null){
-            if(current.value==value){
+            if(current.value == value){
                 // if the value in head
-                if(current==head){
+                if(current == head){
                     head = current.next;
                     current.next = null; // will be available for garbage
                 // if the value at the end
@@ -135,7 +134,7 @@ public class SinglyLinkedList {
         tail.next = null;
         head = previous;
     }
-    public void removeDuplicate(){
+    public void removeDuplicate(){   // O(n)
         Node current = head;
         while (current != null) {
             Node nextDistinctNode = current.next;
