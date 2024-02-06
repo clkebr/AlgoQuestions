@@ -3,7 +3,7 @@ package org.algo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpiralTraverse {
+public class Algo_8_SpiralTraverse {
     /*
     Write a function that takes in an n x m two-dimensional array (that can be square-shaped
     when n == m) and returns a one-dimensional array of all the array's elements in spiral order.
@@ -25,7 +25,7 @@ public class SpiralTraverse {
     // Solution1- Iterative approach
     // O(n) time | O(n) space - where n is the total number of elements in the array
     public static List<Integer> spiralTraverse(int[][] array) {
-        if (array.length == 0) return new ArrayList<Integer>();
+        if (array.length == 0) return new ArrayList<>();
         var result = new ArrayList<Integer>();
         int startRow = 0;
         int endRow = array.length - 1;
